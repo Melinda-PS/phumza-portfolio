@@ -4,101 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Phumza Sotyantya</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9fafb;
-      color: #1f2937;
-    }
-    header {
-      background-color: #3b82f6;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a.active {
-      text-decoration: underline;
-    }
-    main {
-      padding: 2rem;
-    }
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    .links a {
-      margin-right: 1rem;
-      color: #3b82f6;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.2s;
-    }
-    .links a:hover {
-      color: #1d4ed8;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #3b82f6;
-      color: white;
-      margin-top: 2rem;
-    }
-    .technical-skills {
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .skill {
-      background-color: #e5e7eb;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Phumza Sotyantya</h1>
-    <p>Systems Development Graduate | Java | Python | Hugging Face</p>
+    <h1>My Projects</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -106,8 +16,7 @@
     </nav>
   </header>
 
-  <main class="projects-grid">
-    <!-- Featured Projects -->
+  <main class="content-container projects-grid">
     <h2>Featured Projects</h2>
 
     <div class="card">
@@ -116,75 +25,56 @@
       <p>Real-time sentiment analysis web app using Hugging Face Transformers and Streamlit.</p>
       <p><strong>Tech:</strong> Python, Streamlit, Hugging Face</p>
       <div class="links">
-        <a href="https://czk4haum5pvgxruigazj7r.streamlit.app/">Live Demo</a>
+        <a href="https://czk4haum5pvgxruigazj7r.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
       </div>
     </div>
 
     <div class="card">
-      <img src="assets/flashcard.png" alt="Flashcard App" />
-      <h3>Flashcard App</h3>
-      <p>Android app to create, view, and study flashcards using Java & SQLite.</p>
-      <p><strong>Tech:</strong> Java, SQLite</p>
+      <img src="assets/bias-audit.png" alt="COMPAS Bias Audit" />
+      <h3>COMPAS Bias Audit</h3>
+      <p>Audit of criminal justice AI system COMPAS, exploring fairness and bias.</p>
+      <p><strong>Tech:</strong> Python, Data Analysis</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/accessibility-tool.png" alt="Accessibility Tool" />
+      <h3>Accessibility Tool</h3>
+      <p>AI solution designed to improve accessibility for users with disabilities.</p>
+      <p><strong>Tech:</strong> AI, JavaScript</p>
       <div class="links">
-        <a href="https://youtu.be/IFbqXimVjhA">Demo</a>
-        <a href="https://github.com/Melinda-PS/FlashcardApp-BostonCity-SummativeProject">GitHub</a>
-        <a href="app-debug.apk">Download APK</a>
+        <a href="https://github.com/Lisekho3/ai-accessebility-project-34" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
 
-    <div class="card">
-      <img src="assets/resume.png" alt="PS Resume Maker" />
-      <h3>PS Resume Maker</h3>
-      <p>AI-driven resume builder generating ATS-friendly CVs with smart templates.</p>
-      <p><strong>Tech:</strong> GPT‑3.5, Tailwind CSS</p>
-      <div class="links">
-        <a href="https://github.com/Melinda-PS/career-resume-forge">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Other Projects -->
-    <h2>Additional Projects</h2>
+    <h2>Other Projects</h2>
 
     <div class="card">
-      <i class="fas fa-robot fa-3x"></i>
       <h3>AI Concept Chatbot</h3>
       <p>Conversational chatbot built on Botpress for interactive learning.</p>
     </div>
 
     <div class="card">
-      <i class="fas fa-accessible-icon fa-3x"></i>
-      <h3>Accessibility Tool</h3>
-      <p>AI solution designed to improve accessibility.</p>
+      <h3>Flashcard App</h3>
+      <p>Android app to create, view, and study flashcards using Java & SQLite.</p>
       <div class="links">
-        <a href="https://github.com/Lisekho3/ai-accessebility-project-34">GitHub</a>
+        <a href="https://youtu.be/IFbqXimVjhA" target="_blank" rel="noopener noreferrer">Demo</a>
+        <a href="https://github.com/Melinda-PS/FlashcardApp-BostonCity-SummativeProject" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="app-debug.apk" download>Download APK</a>
       </div>
     </div>
 
     <div class="card">
-      <i class="fas fa-balance-scale fa-3x"></i>
-      <h3>COMPAS Bias Audit</h3>
-      <p>Audit of criminal justice AI system COMPAS, exploring fairness and bias.</p>
+      <h3>PS Resume Maker</h3>
+      <p>AI-driven resume builder generating ATS-friendly CVs with smart templates.</p>
+      <div class="links">
+        <a href="https://github.com/Melinda-PS/career-resume-forge" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
-  </main>
 
-  <section class="technical-skills">
-    <h2>Technical Skills & Competencies</h2>
-    <div class="skills-list">
-      <div class="skill">Java</div>
-      <div class="skill">Python</div>
-      <div class="skill">Hugging Face</div>
-      <div class="skill">Streamlit</div>
-      <div class="skill">SQLite</div>
-      <div class="skill">Tailwind CSS</div>
-      <div class="skill">Botpress</div>
-      <div class="skill">AI Systems</div>
-    </div>
-  </section>
+  </main>
 
   <footer>
     © 2025 Phumza Sotyantya
   </footer>
-
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
