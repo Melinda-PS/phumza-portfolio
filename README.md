@@ -1,6 +1,6 @@
 # Phumza Melinda Sotyantya | Portfolio
 
-Welcome to my personal portfolio showcasing my projects, skills, and professional journey as a **Systems Development Graduate** passionate about building accessible, AI-powered, and impactful solutions.
+Welcome to my personal portfolio showcasing my projects, skills, and professional journey as an **IT Support Associate and Systems Development Graduate** passionate about building accessible, AI-powered, and impactful solutions.
 
 ## 🌐 Live Portfolio
 [View Portfolio](https://melinda-ps.github.io/phumza-portfolio/index.html)
