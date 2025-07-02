@@ -29,6 +29,7 @@ Welcome to my personal portfolio showcasing my projects, skills, and professiona
 - **Description:** Android flashcard app for learning and revision.
 - **Tech Stack:** Java, SQLite
 - **GitHub:** [Repository](https://github.com/Melinda-PS/FlashcardApp-BostonCity-SummativeProject)
+- **Note:** ⚠️ *Download at your own risk — the app is still being updated and cleaned for improved performance and security.*
 - **APK Download:** [Download APK](https://github.com/Melinda-PS/FlashcardApp-BostonCity-SummativeProject/blob/main/app-debug.apk?raw=true)
 
 ### 5. Specific Sector AI Prototype
