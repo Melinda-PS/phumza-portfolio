@@ -75,8 +75,6 @@ You can [Download My CV Here](https://melinda-ps.github.io/phumza-portfolio/asse
 - Smooth fade-in animations
 - Interactive project cards
 - Clean, responsive layout
-- Abstract tech-themed hero image
-
 ---
 
 Thank you for visiting my portfolio! 😊
