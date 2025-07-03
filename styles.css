@@ -265,3 +265,20 @@ button:focus {
     transform: translateY(0);
   }
 }
+/* LinkedIn QR Section */
+.linkedin-qr {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.qr-image {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.qr-image:hover {
+  transform: scale(1.05);
+}
