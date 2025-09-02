@@ -1,3 +1,40 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+/* Subtle background for homepage */
+body.home-page {
+  background-color: #f9fafb;
+  background-image: radial-gradient(circle, #e0f2fe 1px, transparent 1px),
+                    radial-gradient(circle, #e0f2fe 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+}
+
+header {
+  background-color: #3b82f6;
+  color: white;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 /* Header Title: subtle underline accent */
 header h1 {
   font-size: 2rem; /* slightly bigger */
@@ -17,6 +54,30 @@ header h1::after {
   height: 3px;
   background-color: #2563eb; /* your main blue */
   border-radius: 3px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #bfdbfe;
+}
+
+main.content-container {
+  max-width: 1100px;
+  padding: 2rem 1rem 3rem;
+  margin: 0 auto;
+  flex-grow: 1;
+  text-align: center;
 }
 
 /* Main headline - stronger, clean */
@@ -45,6 +106,8 @@ h2 {
   font-size: 1.1rem;
   border-radius: 9999px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin: 0.5rem;
 }
 
 .cv-button:hover {
@@ -127,4 +190,77 @@ h2 {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+
+.fade-in:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.fade-in:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.fade-in:nth-child(3) {
+  animation-delay: 1.3s;
+}
+
+/* Footer */
+footer {
+  background-color: #e0e7ff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-top: auto;
+}
+
+/* Focus States */
+a:focus,
+button:focus {
+  outline: 2px dashed #2563eb;
+  outline-offset: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .quick-highlights ul {
+    font-size: 0.95rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .highlight {
+    font-size: 1.1rem;
+  }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
