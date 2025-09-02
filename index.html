@@ -54,5 +54,16 @@
   <footer>
     © 2025 Phumza Sotyantya
   </footer>
+
+  <script>
+    // Remove fade-in class after animation to prevent repeated fade
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.addEventListener('animationend', () => {
+        el.classList.remove('fade-in');
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    });
+  </script>
 </body>
 </html>
