@@ -100,6 +100,7 @@ h2 {
 /* Buttons */
 .cv-button {
   background-color: #2563eb;
+  color: white;
   box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
   padding: 0.9rem 2.25rem;
   font-weight: 700;
@@ -192,12 +193,119 @@ h2 {
   margin-left: -1em;
 }
 
+/* Grid layouts */
+.card-grid,
+.skills-grid,
+.projects-grid,
+.certifications-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.skills-grid,
+.projects-grid,
+.certifications-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card design */
+.card,
+.skill-card,
+.cert-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover,
+.skill-card:hover,
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card h3,
+.skill-card h3,
+.cert-card h3 {
+  margin-bottom: 0.75rem;
+  color: #1e40af;
+}
+
+.card p,
+.skill-card ul,
+.cert-card p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Card links */
+.links a {
+  display: inline-block;
+  margin-right: 0.75rem;
+  margin-top: 0.75rem;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Embedded videos */
+.card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Certifications */
+.cert-card p {
+  margin: 0.5rem 0;
+}
+
+.cert-card a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cert-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+.contact-info {
+  margin-top: 2rem;
+}
+
+.linkedin-qr {
+  margin: 1.5rem auto;
+  max-width: 160px;
+}
+
+.qr-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
 /* Fade-in animation */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.3s; /* delay fade in slightly */
+  animation-delay: 0.3s;
 }
 
 /* Footer */
