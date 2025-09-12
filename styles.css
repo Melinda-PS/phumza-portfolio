@@ -151,7 +151,7 @@ h2 {
 /* Card images */
 .card img {
   width: 100%;
-  height: 180px;
+  height: auto; /* Maintain natural aspect ratio */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -171,6 +171,7 @@ h2 {
 .links a:hover {
   text-decoration: underline;
 }
+
 
 /* Contact */
 .contact-info {
