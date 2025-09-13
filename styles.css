@@ -1,4 +1,4 @@
-/* Reset and base */
+/* Reset and Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,9 +16,8 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Subtle background for homepage */
+/* Subtle homepage background */
 body.home-page {
-  background-color: #f9fafb;
   background-image: radial-gradient(circle, #e0f2fe 1px, transparent 1px),
                     radial-gradient(circle, #e0f2fe 1px, transparent 1px);
   background-position: 0 0, 25px 25px;
@@ -72,7 +71,7 @@ nav a.active {
   color: #bfdbfe;
 }
 
-/* Main container */
+/* Main Container */
 main.content-container {
   max-width: 1100px;
   padding: 2rem 1rem 3rem;
@@ -116,62 +115,98 @@ h2 {
   transform: translateY(-3px);
 }
 
-/* Cards Grid Layout */
-.cards-grid {
+/* Card Layouts */
+.cards-grid,
+.projects-grid,
+.cert-grid {
   display: grid;
   gap: 1.5rem;
   margin-top: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.card {
+.card,
+.cert-card {
   background: white;
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  text-align: left;
-  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
+.card:hover,
+.cert-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.card h3 {
+.card h3,
+.cert-card h3 {
   margin-bottom: 0.75rem;
   color: #1e40af;
 }
 
-.card p {
+.card p,
+.cert-card p {
   font-size: 0.95rem;
   color: #374151;
+  margin-bottom: 0.5rem;
 }
 
-/* Card images */
-.card img {
+/* Card Images & Iframes */
+.card img,
+.card iframe,
+.cert-card img {
   width: 100%;
-  height: auto; /* Maintain natural aspect ratio */
+  height: auto;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
-/* Card links */
-.links a {
-  display: inline-block;
-  margin-right: 0.75rem;
-  margin-top: 0.75rem;
-  color: #2563eb;
+/* Tech Stack Badges */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tech-stack span {
+  background-color: #e0f2fe;
+  color: #1e40af;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.links a {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .links a:hover {
-  text-decoration: underline;
+  background-color: #1e40af;
+  transform: translateY(-2px);
 }
-
 
 /* Contact */
 .contact-info {
@@ -206,31 +241,7 @@ button:focus {
   outline-offset: 4px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  nav a {
-    margin-left: 1rem;
-    font-size: 0.9rem;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .highlight {
-    font-size: 1.1rem;
-  }
-
-  .card img {
-    height: 140px;
-  }
-}
-
-/* Fade-in animation */
+/* Fade-in Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -239,12 +250,19 @@ button:focus {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav a { margin-left: 1rem; font-size: 0.9rem; }
+  header h1 { font-size: 1.5rem; }
+  h2 { font-size: 2rem; }
+  .highlight { font-size: 1.1rem; }
+  .card img,
+  .card iframe,
+  .cert-card img { max-height: 180px; }
+  .tech-stack span { font-size: 0.8rem; }
+  .links a { font-size: 0.85rem; padding: 0.4rem 0.8rem; }
 }
