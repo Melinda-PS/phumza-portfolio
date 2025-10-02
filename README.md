@@ -1,4 +1,4 @@
-# Phumza Melinda Sotyantya | Portfolio
+# Phumza Sotyantya | Portfolio
 
 Welcome to my personal portfolio showcasing my projects, skills, and professional journey as an **IT Support Associate and Systems Development Graduate** passionate about building accessible, AI-powered, and impactful solutions.
 
@@ -52,30 +52,13 @@ Welcome to my personal portfolio showcasing my projects, skills, and professiona
 - **Try the Chatbot:** [Launch Bot](https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/17/03/20250517031541-XWVYDKY6.json)
 
 ---
-
-## 📥 Resume
-You can [Download My CV Here](https://melinda-ps.github.io/phumza-portfolio/assets/Phumza-S.pdf).
-
----
-
-## 📫 Contact Me
-- **LinkedIn:** [View Profile](https://za.linkedin.com/in/phumza-sotyantya-44929427a)
-
----
-
 ## 🚀 Technologies Used
 - HTML, CSS, JavaScript
 - Python, Streamlit, Gradio
 - Hugging Face, Botpress
 - Android (Java & SQLite)
-- Git & GitHub
+- GitHub
 
----
-
-## 🎨 Design Notes
-- Smooth fade-in animations
-- Interactive project cards
-- Clean, responsive layout
 ---
 
 Thank you for visiting my portfolio! 😊
