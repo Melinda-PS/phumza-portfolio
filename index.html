@@ -5,49 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-blue: #007bff;
+      --text-dark: #222;
+      --text-light: #555;
+      --bg-light: #f9f9f9;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      color: var(--primary-blue);
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--primary-blue);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: linear-gradient(to bottom, #fff, #f0f6ff);
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-blue);
+    }
+
+    .hero p.tagline {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero blockquote {
+      font-style: italic;
+      color: #333;
+      font-size: 1.1rem;
+      margin: 1rem auto;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    .hero .cta-buttons {
+      margin-top: 1.5rem;
+    }
+
+    .hero .cv-button {
+      display: inline-block;
+      background: var(--primary-blue);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      margin: 0.3rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .hero .cv-button:hover {
+      background: #0056b3;
+      transform: translateY(-3px);
+    }
+
+    .what-i-do {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: #fff;
+    }
+
+    .what-i-do h3 {
+      color: var(--primary-blue);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .what-i-do ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    .what-i-do li {
+      background: var(--bg-light);
+      margin: 0.7rem 0;
+      padding: 1rem;
+      border-left: 4px solid var(--primary-blue);
+      text-align: left;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #fff;
+      border-top: 1px solid #eee;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Optional fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeInUp 1s forwards;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body class="home-page">
   <header>
     <h1>Phumza Sotyantya</h1>
     <nav>
       <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Me</a>
+      <a href="about.html">About</a>
       <a href="skills.html">Skills</a>
       <a href="beyond.html">Beyond the Code</a>
       <a href="projects.html">Projects</a>
-      <a href="experience-cert.html">Experience + Certifications</a>
-      <a href="contact.html">Resume + Contact</a>
+      <a href="experience-cert.html">Experience + Certificates</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main class="content-container">
-    <!-- ====== INTRO ====== -->
-    <section class="intro-card fade-in">
-      <h2>Welcome to My Portfolio</h2>
-      <p class="highlight">
-        Hi! I’m Phumza, a Systems Development graduate passionate about building intelligent, accessible, and impactful digital solutions.
-      </p>
-      <p>
-        Explore my projects, skills, and community work to learn more about how I’m using technology to make a difference.
-      </p>
-      <div class="cta-section">
+  <main>
+    <section class="hero fade-in">
+      <h2>Phumza M Sotyantya</h2>
+      <p class="tagline">Systems Development Graduate | IT Support | Runner | AI Enthusiast</p>
+      <blockquote>“Innovation isn’t about what we can build — it’s about who we build it for.”</blockquote>
+      <div class="cta-buttons">
         <a href="projects.html" class="cv-button">View My Work</a>
         <a href="contact.html" class="cv-button">Get in Touch</a>
       </div>
     </section>
 
-    <!-- ====== QUOTE ====== -->
-    <section class="quote-card fade-in">
-  <div class="quote-content">
-    <blockquote>
-      “Innovation isn’t about what we can build — it’s about who we build it for.”
-    </blockquote>
-    <span class="author">— Phumza Sotyantya</span>
-  </div>
-</section>
-    
-    <!-- ====== HIGHLIGHTS ====== -->
-    <section class="quick-highlights fade-in">
+    <section class="what-i-do fade-in">
       <h3>What I Do</h3>
       <ul>
         <li>💡 Design user-friendly and accessible interfaces</li>
@@ -55,7 +181,7 @@
         <li>🤝 Collaborate on community tech initiatives</li>
       </ul>
     </section>
-    </main>
+  </main>
 
   <footer>
     © 2025 Phumza Sotyantya
