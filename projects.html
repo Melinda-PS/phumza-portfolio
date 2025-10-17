@@ -12,29 +12,30 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
-      <a href="skills.html">Skills</a>
       <a href="beyond.html">Beyond the Code</a>
       <a href="projects.html" class="active">Projects</a>
-      <a href="experience-cert.html">Experience + Certifications</a>
+      <a href="experience-cert.html">Experience + Skills</a>
       <a href="contact.html">Resume + Contact</a>
     </nav>
   </header>
 
   <main class="content-container">
-    <section class="intro-card">
-      <h2>Featured Projects</h2>
+    <!-- ====== INTRO ====== -->
+    <section class="intro-card fade-in">
+      <h2>Projects & Innovation</h2>
       <p class="highlight">
-        A showcase of my academic, collaborative, and AI-driven projects — blending innovation with real-world impact.
+        A selection of projects that reflect my passion for accessibility, innovation, and real-world problem solving — built using a mix of AI, software development, and user-centered design.
       </p>
     </section>
 
+    <!-- ====== PROJECTS GRID ====== -->
     <section class="projects-grid fade-in">
 
       <!-- Accessibility Tool -->
       <div class="card">
         <iframe src="https://www.youtube.com/embed/57-Mm3HstZc" frameborder="0" allowfullscreen></iframe>
         <h3>Accessibility Tool</h3>
-        <p>AI solution designed to improve accessibility for users with disabilities.</p>
+        <p>AI solution designed to enhance accessibility for users with disabilities — leveraging voice and visual recognition technology.</p>
         <div class="tech-stack">
           <span>AI</span><span>Python</span>
         </div>
@@ -48,7 +49,7 @@
       <div class="card">
         <img src="https://via.placeholder.com/400x200?text=Sentiment+Dashboard" alt="Sentiment Dashboard Screenshot">
         <h3>Sentiment Dashboard</h3>
-        <p>Real-time sentiment analysis app using Hugging Face and Streamlit.</p>
+        <p>Real-time social sentiment analysis dashboard powered by Hugging Face models and Streamlit visualization.</p>
         <div class="tech-stack">
           <span>Python</span><span>Streamlit</span><span>Transformers</span>
         </div>
@@ -59,14 +60,14 @@
 
       <!-- COMPAS Bias Audit -->
       <div class="card">
-        <img src="https://via.placeholder.com/400x200?text=COMPAS+Audit" alt="COMPAS Bias Audit">
+        <img src="https://via.placeholder.com/400x200?text=COMPAS+Bias+Audit" alt="COMPAS Bias Audit">
         <h3>COMPAS Bias Audit</h3>
-        <p>Auditing bias in AI-based criminal justice system. Team: The Elements.</p>
+        <p>Auditing fairness in AI-based criminal justice algorithms to address data bias and promote transparency. Team project: <em>The Elements</em>.</p>
         <div class="tech-stack">
           <span>Python</span><span>Colab</span>
         </div>
         <div class="links">
-          <a href="https://colab.research.google.com/drive/12kavZcnyFfFzFpaqmHIxGu-XEzRWDc-d?usp=sharing" target="_blank">Open Notebook</a>
+          <a href="https://colab.research.google.com/drive/12kavZcnyFfFzFpaqmHIxGu-XEzRWDc-d?usp=sharing" target="_blank">View Notebook</a>
         </div>
       </div>
 
@@ -74,7 +75,7 @@
       <div class="card">
         <iframe src="https://www.youtube.com/embed/IFbqXimVjhA" frameborder="0" allowfullscreen></iframe>
         <h3>Flashcard App</h3>
-        <p>Android app to study flashcards using Java and SQLite.</p>
+        <p>Android app for studying with custom flashcards, built using Java and SQLite for offline accessibility.</p>
         <div class="tech-stack">
           <span>Java</span><span>SQLite</span>
         </div>
@@ -84,13 +85,13 @@
         </div>
       </div>
 
-      <!-- Sector AI Prototype -->
+      <!-- Education Sector AI Prototype -->
       <div class="card">
         <iframe src="https://www.youtube.com/embed/HfF3JSBga3k" frameborder="0" allowfullscreen></iframe>
-        <h3>Specific Sector AI Prototype</h3>
-        <p>AI prototype for the education sector. Team project.</p>
+        <h3>Education Sector AI Prototype</h3>
+        <p>AI-powered prototype created to streamline learning and resource management for students and educators.</p>
         <div class="tech-stack">
-          <span>HTML</span><span>CSS</span><span>JS</span><span>Python</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span>
         </div>
       </div>
 
@@ -98,7 +99,7 @@
       <div class="card">
         <img src="https://via.placeholder.com/400x200?text=Content+Generator" alt="Image Content Generator">
         <h3>Image Content Generator</h3>
-        <p>AI-powered image description tool using Gradio and Hugging Face Spaces.</p>
+        <p>AI tool that generates captions and descriptions for images using Gradio and Hugging Face Spaces.</p>
         <div class="tech-stack">
           <span>Python</span><span>Gradio</span>
         </div>
@@ -108,11 +109,14 @@
         </div>
       </div>
 
-      <!-- PS Resume Maker -->
+      <!-- Resume Maker -->
       <div class="card">
         <img src="https://via.placeholder.com/400x200?text=Resume+Maker" alt="Resume Maker">
         <h3>PS Resume Maker</h3>
-        <p>Resume generator with ATS-friendly templates powered by AI.</p>
+        <p>Smart resume generator that produces ATS-optimized templates using AI-powered text structuring.</p>
+        <div class="tech-stack">
+          <span>Python</span><span>AI</span>
+        </div>
         <div class="links">
           <a href="https://github.com/Melinda-PS/career-resume-forge" target="_blank">GitHub</a>
         </div>
@@ -122,7 +126,7 @@
       <div class="card">
         <img src="https://via.placeholder.com/400x200?text=AI+Chatbot" alt="AI Chatbot">
         <h3>AI Concept Chatbot</h3>
-        <p>Conversational chatbot for education, built with Botpress.</p>
+        <p>Conversational chatbot designed for educational engagement, built on Botpress with adaptive responses.</p>
         <div class="tech-stack">
           <span>Botpress</span><span>AI</span>
         </div>
@@ -131,6 +135,11 @@
         </div>
       </div>
 
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="cta-section fade-in">
+      <a href="contact.html" class="cv-button">Get in Touch</a>
     </section>
   </main>
 
