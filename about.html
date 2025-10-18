@@ -70,7 +70,6 @@
       color: var(--nav-hover);
     }
 
-    /* Dropdown styling */
     nav li ul {
       display: none;
       position: absolute;
@@ -110,3 +109,131 @@
     }
 
     .hero p.tagline {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-light);
+    }
+
+    .card {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: var(--section-padding);
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      font-size: 1.05rem;
+    }
+
+    .what-i-do {
+      text-align: center;
+      padding: var(--section-padding);
+    }
+
+    .what-i-do h3 {
+      color: var(--primary-blue);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .what-i-do ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    .what-i-do li {
+      background: var(--card-bg);
+      margin: 0.7rem 0;
+      padding: 1rem;
+      border-left: 4px solid var(--primary-blue);
+      text-align: left;
+      border-radius: 6px;
+    }
+
+    .cv-button {
+      display: inline-block;
+      background: var(--primary-blue);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      margin: 0.3rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .cv-button:hover {
+      background: #0056b3;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #0f162a;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Phumza Sotyantya</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li>
+          <a href="#">Skills ▾</a>
+          <ul>
+            <li><a href="skills.html">Technical Skills</a></li>
+            <li><a href="experience-cert.html">Experience + Certificates</a></li>
+          </ul>
+        </li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="beyond.html">Beyond the Code</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>About Me</h2>
+      <p class="tagline">
+        I’m a <strong>Systems Development Graduate</strong> dedicated to using technology to empower communities and create inclusive digital solutions.
+      </p>
+    </section>
+
+    <section class="card">
+      <p>
+        With a background in <strong>Systems Development, Peer Advising, and IT Support</strong>, I’ve combined academic knowledge with real-world experience to design solutions that are both practical and people-centered.
+      </p>
+      <p>
+        My passion lies in <strong>problem-solving, accessibility, and innovation</strong>—creating systems and tools that make a meaningful difference in how people connect with technology.
+      </p>
+    </section>
+
+    <section class="what-i-do">
+      <h3>Quick Facts</h3>
+      <ul>
+        <li>📍 Based in Eastern Cape, South Africa</li>
+        <li>🎓 Diploma in Systems Development – Boston City Campus (2021–2024)</li>
+        <li>💻 Experience in IT Support and Peer Advising</li>
+        <li>🌟 Cisco, Microsoft, and Coursera</li>
+      </ul>
+    </section>
+
+    <section style="text-align: center; padding: 2rem;">
+      <a href="experience-cert.html" class="cv-button">See My Experience & Certifications</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Phumza Sotyantya
+  </footer>
+</body>
+</html>
