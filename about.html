@@ -6,177 +6,6 @@
   <title>About Me | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary-blue: #1e90ff;
-      --bg-dark: #0a0f1c;
-      --text-light: #f0f4ff;
-      --nav-hover: #63b3ff;
-      --card-bg: #1a233e;
-      --section-padding: 3rem 2rem;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      color: var(--text-light);
-      background-color: var(--bg-dark);
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: #0f162a;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      color: var(--primary-blue);
-      margin: 0;
-    }
-
-    nav {
-      position: relative;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav li {
-      position: relative;
-    }
-
-    nav a {
-      display: block;
-      padding: 0.5rem 1rem;
-      color: var(--text-light);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover, nav a.active {
-      color: var(--nav-hover);
-    }
-
-    nav li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #0f162a;
-      border-radius: 6px;
-      min-width: 180px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      z-index: 100;
-    }
-
-    nav li:hover > ul {
-      display: block;
-    }
-
-    nav li ul li a {
-      padding: 0.6rem 1rem;
-      color: var(--text-light);
-    }
-
-    nav li ul li a:hover {
-      background: #1a233e;
-      color: var(--primary-blue);
-    }
-
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      background: linear-gradient(to bottom, #0a0f1c, #1a233e);
-    }
-
-    .hero h2 {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-      color: var(--primary-blue);
-    }
-
-    .hero p.tagline {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      color: var(--text-light);
-    }
-
-    .card {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: var(--section-padding);
-      background: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-      font-size: 1.05rem;
-    }
-
-    .what-i-do {
-      text-align: center;
-      padding: var(--section-padding);
-    }
-
-    .what-i-do h3 {
-      color: var(--primary-blue);
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .what-i-do ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 600px;
-    }
-
-    .what-i-do li {
-      background: var(--card-bg);
-      margin: 0.7rem 0;
-      padding: 1rem;
-      border-left: 4px solid var(--primary-blue);
-      text-align: left;
-      border-radius: 6px;
-    }
-
-    .cv-button {
-      display: inline-block;
-      background: var(--primary-blue);
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      margin: 0.3rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .cv-button:hover {
-      background: #0056b3;
-      transform: translateY(-3px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #0f162a;
-      color: var(--text-light);
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 
 <body>
@@ -186,16 +15,10 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
-        <li>
-          <a href="#">Skills ▾</a>
-          <ul>
-            <li><a href="skills.html">Technical Skills</a></li>
-            <li><a href="experience-cert.html">Experience + Certificates</a></li>
-          </ul>
-        </li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience-cert.html">Experience + Skills</a></li>
         <li><a href="beyond.html">Beyond the Code</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Resume + Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -208,13 +31,15 @@
       </p>
     </section>
 
-    <section class="card">
-      <p>
-        With a background in <strong>Systems Development, Peer Advising, and IT Support</strong>, I’ve combined academic knowledge with real-world experience to design solutions that are both practical and people-centered.
-      </p>
-      <p>
-        My passion lies in <strong>problem-solving, accessibility, and innovation</strong>—creating systems and tools that make a meaningful difference in how people connect with technology.
-      </p>
+    <section class="content-section">
+      <div class="card">
+        <p>
+          With a background in <strong>Systems Development, Peer Advising, and IT Support</strong>, I’ve combined academic knowledge with real-world experience to design solutions that are both practical and people-centered.
+        </p>
+        <p>
+          My passion lies in <strong>problem-solving, accessibility, and innovation</strong> — creating systems and tools that make a meaningful difference in how people connect with technology.
+        </p>
+      </div>
     </section>
 
     <section class="what-i-do">
@@ -223,7 +48,7 @@
         <li>📍 Based in Eastern Cape, South Africa</li>
         <li>🎓 Diploma in Systems Development – Boston City Campus (2021–2024)</li>
         <li>💻 Experience in IT Support and Peer Advising</li>
-        <li>🌟 Cisco, Microsoft, and Coursera</li>
+        <li>🌟 Cisco, Microsoft, and Coursera Certified</li>
       </ul>
     </section>
 
