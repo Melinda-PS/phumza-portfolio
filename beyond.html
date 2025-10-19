@@ -5,68 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Beyond the Code | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Polished grid & cards styling */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.2s, box-shadow 0.2s;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.5s forwards;
-    }
-
-    .card:nth-child(1) { animation-delay: 0.1s; }
-    .card:nth-child(2) { animation-delay: 0.2s; }
-    .card:nth-child(3) { animation-delay: 0.3s; }
-    .card:nth-child(4) { animation-delay: 0.4s; }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .links a {
-      display: inline-block;
-      margin-right: 0.5rem;
-      margin-top: 0.5rem;
-      padding: 0.3rem 0.8rem;
-      background-color: var(--accent, #4a90e2);
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 0.85rem;
-      transition: background-color 0.2s;
-    }
-
-    .links a:hover {
-      background-color: #357ab8;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
 </head>
 <body>
   <!-- ====== HEADER ====== -->
@@ -82,13 +20,14 @@
     </nav>
   </header>
 
+  <!-- ====== MAIN CONTENT ====== -->
   <main class="content-container">
     <section class="hero fade-in">
       <h2>Life Beyond the Code</h2>
-      <p>In addition to my work in technology, I serve as a Youth Leader at <strong>The Salvation Army, Mdantsane Corps</strong>. This role has provided me with meaningful leadership and community engagement experiences.</p>
+      <p>In addition to my work in technology, I actively serve as a Youth Leader at <strong>The Salvation Army, Mdantsane Corps</strong>. This role has provided me with meaningful leadership and community engagement experiences.</p>
     </section>
 
-    <section class="cards-grid">
+    <section class="cards-grid fade-in">
       <div class="card">
         <img src="assets/LocalOfficers Workshop.jpg" alt="Local Officers Workshop">
         <h3>Local Officers Workshop</h3>
