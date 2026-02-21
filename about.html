@@ -6,25 +6,6 @@
   <title>About Me | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Typing effect */
-    .typing {
-      border-right: 2px solid var(--primary-blue);
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 3s steps(60, end) forwards, blink 0.7s step-end infinite;
-      display: inline-block;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
     .hero-text h2 {
       color: var(--primary-blue);
       font-size: 2.2rem;
@@ -38,6 +19,7 @@
       max-width: 700px;
       margin: 0.5rem auto 1rem auto;
       text-align: center;
+      min-height: 2.5em; /* prevent layout shift */
     }
 
     blockquote {
@@ -68,9 +50,7 @@
       line-height: 1.6;
     }
 
-    .what-i-do li {
-      margin-bottom: 0.8rem;
-    }
+    .what-i-do li { margin-bottom: 0.8rem; }
 
     @media (max-width: 768px) {
       .hero-text h2 { font-size: 2rem; }
@@ -100,7 +80,7 @@
   <section class="hero fade-in">
     <div class="hero-text">
       <h2>About Me</h2>
-      <p class="tagline"><span class="typing">I’m a Systems Development Graduate committed to problem-solving, innovation, and making technology accessible and practical.</span></p>
+      <p class="tagline" id="typing-text"></p>
       <blockquote>
         "I work well in team-oriented environments, enjoy assisting others, and am committed to continuous learning and structured problem-solving."
       </blockquote>
@@ -141,6 +121,21 @@
     navLinks.classList.toggle('show');
     navToggle.classList.toggle('open');
   });
+
+  // Typing effect with JS
+  const text = "I’m a Systems Development Graduate committed to problem-solving, innovation, and making technology accessible and practical.";
+  const typingElement = document.getElementById('typing-text');
+  let index = 0;
+
+  function typeWriter() {
+    if(index < text.length){
+      typingElement.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 40); // adjust speed (ms)
+    }
+  }
+
+  window.onload = typeWriter;
 </script>
 
 </body>
