@@ -8,10 +8,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <h1>Phumza Sotyantya</h1>
-    <nav>
+
+  <!-- ====== HEADER ====== -->
+  <header class="navbar">
+    <h1 class="logo">Phumza Sotyantya</h1>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -24,62 +33,70 @@
   </header>
 
   <!-- HERO -->
-  <main class="content-container">
-    <section class="hero fade-in">
-      <h2>Life Beyond the Code</h2>
-      <p>
-        Here's a glimpse of what I enjoy outside IT — from adventure and fitness to reading and community engagement.
-      </p>
-    </section>
+  <section class="hero fade-in">
+    <h2>Life Outside IT</h2>
+    <p>Here's a peek into the activities and passions that shape me beyond technology.</p>
+  </section>
 
-    <!-- LIFE OUTSIDE IT GRID -->
-    <section class="cards-grid fade-in">
+  <!-- ====== LIFE OUTSIDE IT GRID ====== -->
+  <section class="cards-grid fade-in">
 
-      <!-- Hiking -->
-      <div class="card">
-        <img src="assets/hiking.jpg" alt="Hiking Adventure">
-        <h3>Hiking & Outdoors</h3>
-        <p>Exploring trails and staying active — nature is my reset button.</p>
-      </div>
+    <!-- Hiking -->
+    <div class="card">
+      <img src="assets/hiking.jpg" alt="Hiking Adventure">
+      <h3>Hiking & Outdoors</h3>
+      <p>Exploring trails and staying active — nature is my reset button.</p>
+    </div>
 
-      <!-- Books -->
-      <div class="card">
-        <img src="assets/bookstores.jpg" alt="Bookstore / Reading">
-        <h3>Books & Learning</h3>
-        <p>Passionate reader — always hunting for new stories and knowledge in bookstores or online.</p>
-      </div>
+    <!-- Books -->
+    <div class="card">
+      <img src="assets/bookstores.jpg" alt="Bookstore / Reading">
+      <h3>Books & Learning</h3>
+      <p>Passionate reader — always hunting for new stories and knowledge in bookstores or online.</p>
+    </div>
 
-      <!-- Running -->
-      <div class="card">
-        <img src="assets/race.jpg" alt="Running Event">
-        <h3>Running & Fitness</h3>
-        <p>After the finish line! Running keeps me disciplined and energized.</p>
-      </div>
+    <!-- Running -->
+    <div class="card">
+      <img src="assets/race.jpg" alt="Running Event">
+      <h3>Running & Fitness</h3>
+      <p>After the finish line! Running keeps me disciplined and energized.</p>
+    </div>
 
-      <!-- Church 1 -->
-      <div class="card">
-        <img src="assets/LocalOfficers Workshop.jpg" alt="Local Officers Workshop">
-        <h3>Church Leadership</h3>
-        <p>Participated in workshops, learning leadership and service within the community.</p>
-      </div>
+    <!-- Church -->
+    <div class="card">
+      <img src="assets/youngWomen f.jpg" alt="Community Outreach">
+      <h3>Community Outreach</h3>
+      <p>Supporting those in need through acts of kindness and practical assistance.</p>
+    </div>
 
-      <!-- Church 2 -->
-      <div class="card">
-        <img src="assets/Bible Study Session.jpg" alt="Bible Study Session">
-        <h3>Faith & Mentorship</h3>
-        <p>Leading sessions focused on empowering young people through faith and guidance.</p>
-      </div>
+    <!-- Church -->
+    <div class="card">
+      <img src="assets/Bible Study Session.jpg" alt="Bible Study Session">
+      <h3>Faith & Mentorship</h3>
+      <p>Leading sessions focused on empowering young people through faith and guidance.</p>
+    </div>
 
-    </section>
+  </section>
 
-    <!-- CTA -->
-    <section class="cta-section fade-in" style="text-align:center; padding:3rem 0;">
-      <a href="contact.html" class="cv-button">Connect With Me</a>
-    </section>
-  </main>
+  <!-- CTA -->
+  <section class="contact-cta fade-in" style="text-align:center; padding:3rem 0;">
+    <a href="contact.html" class="cv-button">Connect With Me</a>
+  </section>
 
   <footer>
     © 2025 Phumza Sotyantya
   </footer>
+
+  <!-- Hamburger Menu Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
+
 </body>
 </html>
