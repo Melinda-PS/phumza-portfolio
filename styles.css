@@ -69,7 +69,6 @@ header h1 {
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  position: relative;
   transition: all 0.3s ease;
 }
 
@@ -79,6 +78,7 @@ header h1 {
   color: #fff;
 }
 
+/* HAMBURGER MENU */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -119,11 +119,13 @@ header h1 {
   margin: auto;
 }
 
-.hero img {
-  border-radius: 12px;
-  max-width: 300px;
-  width: 100%;
-  height: auto;
+.hero blockquote {
+  font-style: italic;
+  color: var(--text-light);
+  max-width: 650px;
+  margin: 1.5rem auto;
+  line-height: 1.6;
+  font-weight: 600;
 }
 
 /* BUTTONS */
@@ -144,7 +146,7 @@ a.cv-button {
   transform: translateY(-3px);
 }
 
-/* CARDS */
+/* CARDS & GRIDS */
 .cards-grid,
 .projects-grid,
 .certifications-grid,
@@ -169,7 +171,8 @@ a.cv-button {
   box-shadow: 0 10px 25px var(--hover-glow);
 }
 
-.card img {
+.card img,
+.card iframe {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -177,15 +180,8 @@ a.cv-button {
   margin-bottom: 1rem;
 }
 
-/* QUICK FACTS / SKILLS */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.skills span {
+/* TECH STACK */
+.tech-stack span {
   display: inline-block;
   background-color: rgba(30,144,255,0.15);
   color: var(--primary-blue);
@@ -193,18 +189,32 @@ a.cv-button {
   font-size: 0.85rem;
   padding: 0.35rem 0.7rem;
   border-radius: 50px;
-  transition: all 0.3s ease;
-}
-
-.skills span:hover {
-  background-color: rgba(30,144,255,0.25);
-  transform: scale(1.05);
+  margin: 0.2rem;
 }
 
 /* ABOUT CONTENT */
 .content-section {
   max-width: 900px;
   margin: auto;
+}
+
+/* CERTIFICATIONS */
+.cert-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 12px var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cert-card img {
+  max-height:120px;
+  margin-bottom:1rem;
+  object-fit:contain;
 }
 
 /* FOOTER */
@@ -260,5 +270,5 @@ footer {
 @media (max-width: 500px) {
   header h1 { font-size: 1.5rem; }
   .hero h2 { font-size: 2rem; }
-  .hero img { max-width: 250px; }
+  .hero img, .card img { max-width: 250px; }
 }
