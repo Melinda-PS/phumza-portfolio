@@ -3,52 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Phumza Sotyantya</title>
+  <title>Resume & Contact | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- ====== HEADER ====== -->
-  <header>
-    <h1>Phumza Sotyantya</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="beyond.html">Beyond the Code</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experience-cert.html">Experience + Skills</a></li>
-        <li><a href="contact.html" class="active">Resume + Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="content-container">
-    <!-- ====== DOWNLOAD CV ====== -->
-    <section class="cta-section fade-in" style="text-align:center; margin-top:2rem;">
-      <a href="https://melinda-ps.github.io/phumza-portfolio/assets/Melinda.pdf" class="cv-button" download>
-        Download My CV
-      </a>
-    </section>
+<header>
+  <h1>Phumza Sotyantya</h1>
+  <div class="nav-toggle" id="nav-toggle">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience-cert.html">Experience</a>
+    <a href="beyond.html">Beyond</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
 
-    <!-- ====== CONTACT INFO ====== -->
-    <section class="contact-info fade-in" style="text-align:center; margin-top:3rem;">
-      <h2>Contact Information</h2>
+<main>
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <h2>Get in Touch</h2>
+    <p class="tagline">
+      Interested in collaborating or have questions? Feel free to reach out — I’m always open to discussing new ideas, tech projects, and innovation opportunities.
+    </p>
+  </section>
 
-      <div class="linkedin-qr" style="margin-top:1rem;">
-        <a href="https://za.linkedin.com/in/phumza-sotyantya-44929427a" target="_blank" rel="noopener noreferrer">
-          <img src="assets/linkedin_qr.png" alt="LinkedIn QR Code" class="qr-image" style="width:150px; height:150px; border-radius:12px;">
-        </a>
-      </div>
+  <!-- CONTACT INFO -->
+  <section class="content-section fade-in" style="text-align:center;">
+    <h3>Contact Me</h3>
+     <p>LinkedIn: <a href="https://www.linkedin.com/in/phumza-sotyantya" target="_blank" style="color: var(--primary-blue);">linkedin.com/in/phumza-sotyantya</a></p>
+    <p>GitHub: <a href="https://github.com/Melinda-PS" target="_blank" style="color: var(--primary-blue);">github.com/Melinda-PS</a></p>
+  </section>
 
-      <p style="margin-top:1rem;">
-        LinkedIn: <a href="https://za.linkedin.com/in/phumza-sotyantya-44929427a" target="_blank" rel="noopener noreferrer">View My LinkedIn</a>
-      </p>
-    </section>
-  </main>
 
-  <footer>
-    © 2025 Phumza Sotyantya
-  </footer>
+</main>
+
+<footer>© 2025 Phumza Sotyantya</footer>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>
