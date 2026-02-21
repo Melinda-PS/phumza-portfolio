@@ -6,15 +6,14 @@
   <title>Home | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Hero layout: text left, image right */
+    /* HERO LAYOUT */
     .hero {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 6rem 2rem 4rem;
-      background: linear-gradient(to bottom, var(--bg-dark), var(--card-bg));
       gap: 2rem;
+      padding: 6rem 2rem 4rem;
     }
 
     .hero-text {
@@ -28,13 +27,13 @@
     }
 
     .hero-text p.tagline {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: var(--text-muted);
       margin-bottom: 1.5rem;
       line-height: 1.6;
     }
 
-    .hero-text blockquote {
+    blockquote {
       font-style: italic;
       color: var(--text-muted);
       font-size: 1.1rem;
@@ -42,35 +41,43 @@
       margin-bottom: 1.5rem;
     }
 
-    .hero img {
-      max-width: 350px;
-      width: 100%;
-      border-radius: 16px;
-      object-fit: cover;
-      box-shadow: 0 10px 25px var(--hover-glow);
-    }
-
-    /* Optional: block puzzle effect */
+    /* IMAGE PUZZLE */
     .image-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 5px;
+      grid-template-rows: repeat(3, 1fr);
       max-width: 350px;
+      max-height: 350px;
+      gap: 2px;
       border-radius: 12px;
       overflow: hidden;
     }
 
-    .image-grid img {
+    .tile {
+      background-image: url('assets/image_f275c45c.png');
+      background-size: 300%; /* makes each tile show a portion */
+      background-repeat: no-repeat;
       width: 100%;
-      display: block;
+      height: 100%;
     }
 
+    .tile:nth-child(1) { background-position: top left; }
+    .tile:nth-child(2) { background-position: top center; }
+    .tile:nth-child(3) { background-position: top right; }
+    .tile:nth-child(4) { background-position: center left; }
+    .tile:nth-child(5) { background-position: center; }
+    .tile:nth-child(6) { background-position: center right; }
+    .tile:nth-child(7) { background-position: bottom left; }
+    .tile:nth-child(8) { background-position: bottom center; }
+    .tile:nth-child(9) { background-position: bottom right; }
+
+    /* RESPONSIVE */
     @media (max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero img, .image-grid { max-width: 300px; margin: auto; }
+      .hero { flex-direction: column; text-align: center; }
+      .image-grid { margin: auto; }
+    }
+
+    @media (max-width: 500px) {
       .hero-text h2 { font-size: 2rem; }
       .hero-text p.tagline { font-size: 1rem; }
     }
@@ -97,37 +104,34 @@
   <section class="hero fade-in">
     <div class="hero-text">
       <h2>Hello, I’m Phumza</h2>
-      <p class="tagline">A <strong>Systems Development Graduate</strong> passionate about solving problems with technology and creating inclusive digital solutions.</p>
+      <p class="tagline">
+        A <strong>Systems Development Graduate</strong> passionate about solving problems with technology and creating inclusive digital solutions.
+      </p>
       <blockquote>
         "Innovation isn’t about what we can build — it’s about who we build it for."
       </blockquote>
       <a href="about.html" class="cv-button">Learn More About Me</a>
     </div>
 
-    <!-- Image block -->
-    <!-- Option 1: Single image -->
-    <img src="assets/image_f275c45c.png" alt="Phumza avatar">
-
-    <!-- Option 2: Block puzzle effect -->
-    <!--
+    <!-- IMAGE PUZZLE -->
     <div class="image-grid">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 1">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 2">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 3">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 4">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 5">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 6">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 7">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 8">
-      <img src="assets/image_f275c45c.png" alt="Puzzle 9">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
     </div>
-    -->
   </section>
 </main>
 
 <footer>© 2025 Phumza Sotyantya</footer>
 
 <script>
+  // Hamburger toggle
   const navToggle = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
   navToggle.addEventListener('click', () => {
