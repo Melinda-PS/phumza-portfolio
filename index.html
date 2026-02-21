@@ -5,47 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
 <header>
   <h1>Phumza Sotyantya</h1>
-  <div class="nav-toggle" onclick="toggleNav(this)">
+  <div class="nav-toggle" id="nav-toggle">
     <span></span><span></span><span></span>
   </div>
-  <nav class="nav-links">
+  <nav class="nav-links" id="nav-links">
     <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="beyond.html">Beyond</a>
     <a href="projects.html">Projects</a>
     <a href="experience-cert.html">Experience</a>
-    <a href="skills.html">Skills</a>
-    <a href="certifications.html">Certifications</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<main class="hero fade-in">
-  <div class="hero-text">
-    <h2>Welcome to My Portfolio</h2>
-    <p class="tagline">I’m a <strong>Systems Development Graduate</strong> passionate about building tech solutions that empower people and communities.</p>
-    <a href="about.html" class="cv-button">Learn More About Me</a>
-  </div>
-  <div class="hero-image">
+<main>
+  <section class="hero fade-in">
+    <div style="max-width:600px; margin:auto;">
+      <h2>Hello, I’m Phumza</h2>
+      <p class="tagline">A <strong>Systems Development Graduate</strong> passionate about solving problems with technology and creating inclusive digital solutions.</p>
+      <blockquote style="font-size:1.2rem; font-style:italic; color:#a0b3d1; margin-top:1rem; line-height:1.6;">
+        "I enjoy understanding how systems work, documenting processes, and identifying solutions — improving every step of the way."
+      </blockquote>
+      <a href="about.html" class="cv-button">Learn More About Me</a>
+    </div>
     <img src="assets/image_f275c45c.png" alt="Phumza avatar">
-  </div>
+  </section>
 </main>
 
-<footer>
-  © 2025 Phumza Sotyantya
-</footer>
+<footer>© 2025 Phumza Sotyantya</footer>
 
 <script>
-function toggleNav(toggle) {
-  document.querySelector('.nav-links').classList.toggle('show');
-  toggle.classList.toggle('open');
-}
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
 </script>
 
 </body>
