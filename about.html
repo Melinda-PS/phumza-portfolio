@@ -5,82 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Me | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <h1 class="logo">Phumza Sotyantya</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experience-cert.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Phumza Sotyantya</h1>
+  <div class="nav-toggle" onclick="toggleNav(this)"><span></span><span></span><span></span></div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="beyond.html">Beyond</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience-cert.html">Experience</a>
+    <a href="skills.html">Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <!-- HERO -->
-  <section class="hero about-hero fade-in">
+<main class="hero fade-in">
+  <div class="hero-text">
+    <h2>About Me</h2>
+    <p class="tagline">I’m a <strong>Systems Development Graduate</strong> from Boston City Campus. Experienced in IT Support, Peer Advising, and Information Systems in a university environment.</p>
+  </div>
+  <div class="hero-image">
+    <img src="assets/image_f275c45c.png" alt="Phumza avatar">
+  </div>
+</main>
 
-    <div class="hero-text">
-      <h2>About Me</h2>
-      <p class="tagline">
-        I’m a <strong>Systems Development Graduate</strong> dedicated to using technology to empower communities and create inclusive digital solutions.
-      </p>
-    </div>
+<section class="content-section fade-in">
+  <div class="card">
+    <p>Practical ICT training at NMU, working on web app designing, documentation, problem-solving, and supporting users. I enjoy understanding how systems work and identifying improvements.</p>
+    <p>Strong in teamwork, mentorship, and continuous learning. Committed to exploring technology areas where problem-solving, analysis, and structured thinking are key.</p>
+  </div>
+</section>
 
-    <div class="hero-image">
-      <img 
-        src="assets/image_f275c45c.png" 
-        alt="Portrait illustration ">
-    </div>
+<section class="what-i-do fade-in">
+  <h3>Quick Facts</h3>
+  <ul>
+    <li>📍 Based in Eastern Cape, South Africa</li>
+    <li>🎓 Diploma in Systems Development – Boston City Campus (Modules: A+, Security+)</li>
+    <li>💻 Experience in IT Support and Peer Advising</li>
+    <li>🌟 Cisco, Microsoft, and Coursera Certified</li>
+  </ul>
+</section>
 
-  </section>
+<section class="contact-cta fade-in" style="text-align:center;">
+  <a href="experience-cert.html" class="cv-button">See My Experience & Certifications</a>
+</section>
 
-  <!-- ABOUT CONTENT -->
-  <section class="content-section fade-in">
-    <div class="card">
-      <p>
-        Systems Development graduate from Boston City Campus with experience in IT Support and exposure to information systems within a university environment. I completed practical training as an ICT Intern at Nelson Mandela University (Information & Systems Development).
-      </p>
+<footer>© 2025 Phumza Sotyantya</footer>
 
-      <p>
-        I enjoy understanding how systems work, documenting processes, researching solutions, and analysing technical challenges. My interests include supporting users, improving workflows, and contributing through research, documentation, and collaboration.
-      </p>
-
-      <p>
-        I work well in team-oriented environments, value mentorship and continuous learning, and aim to grow within technology roles where problem-solving, analysis, and structured thinking are key.
-      </p>
-    </div>
-  </section>
-
-  <!-- QUICK FACTS -->
-  <section class="what-i-do fade-in">
-    <h3>Quick Facts</h3>
-    <ul>
-      <li>📍 Based in Eastern Cape, South Africa</li>
-      <li>🎓 Diploma in Systems Development – Boston City Campus (Modules included: A+, Security+)</li>
-      <li>💻 Experience in IT Support and Peer Advising</li>
-      <li>🌟 Cisco, Microsoft, and Coursera Certified</li>
-    </ul>
-  </section>
-
-  <!-- CTA -->
-  <section class="contact-cta fade-in" style="padding: 2rem; text-align:center;">
-    <a href="experience-cert.html" class="cv-button">
-      See My Experience & Certifications
-    </a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Phumza Sotyantya
-  </footer>
+<script>
+function toggleNav(toggle) {
+  document.querySelector('.nav-links').classList.toggle('show');
+  toggle.classList.toggle('open');
+}
+</script>
 
 </body>
 </html>
