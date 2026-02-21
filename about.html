@@ -1,66 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Me | Phumza Sotyantya</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
   <h1>Phumza Sotyantya</h1>
-  <div class="nav-toggle" onclick="toggleNav(this)"><span></span><span></span><span></span></div>
-  <nav class="nav-links">
+  <div class="nav-toggle" id="nav-toggle">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="nav-links" id="nav-links">
     <a href="index.html">Home</a>
     <a href="about.html" class="active">About</a>
     <a href="beyond.html">Beyond</a>
     <a href="projects.html">Projects</a>
     <a href="experience-cert.html">Experience</a>
-    <a href="skills.html">Skills</a>
-    <a href="certifications.html">Certifications</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<main class="hero fade-in">
-  <div class="hero-text">
-    <h2>About Me</h2>
-    <p class="tagline">I’m a <strong>Systems Development Graduate</strong> from Boston City Campus. Experienced in IT Support, Peer Advising, and Information Systems in a university environment.</p>
-  </div>
-  <div class="hero-image">
-    <img src="assets/image_f275c45c.png" alt="Phumza avatar">
-  </div>
+<main>
+  <section class="hero fade-in">
+    <div class="hero-text">
+      <h2>About Me</h2>
+      <p class="tagline">
+        I’m a <strong>Systems Development Graduate</strong> committed to problem-solving, innovation, and making technology accessible and practical.
+      </p>
+      <blockquote style="font-size:1.1rem; font-style:italic; color:#a0b3d1; margin-top:1rem; line-height:1.5;">
+        "I work well in team-oriented environments, enjoy assisting others, and am committed to continuous learning and structured problem-solving."
+      </blockquote>
+    </div>
+    <div class="hero-image">
+      <img src="assets/image_f275c45c.png" alt="Phumza avatar">
+    </div>
+  </section>
+
+  <section class="content-section fade-in">
+    <div class="card">
+      <p>
+        With experience in <strong>IT support, peer advising, and ICT support </strong>, I enjoy analyzing systems, documenting processes, and contributing improvements through research and collaboration.
+      </p>
+    </div>
+  </section>
+
+  <section class="what-i-do fade-in">
+    <h3>Quick Facts</h3>
+    <ul>
+      <li>📍 Eastern Cape, South Africa</li>
+      <li>🎓 Diploma in Systems Development – Boston City Campus (Modules: A+, Security+)</li>
+      <li>💻 IT Support, Peer Advising, Systems Analysis</li>
+      <li>💡 Skills: C#, .NET, Visual Studio 2022, HTML</li>
+      <li>🌟 Cisco, Microsoft, Coursera Certified</li>
+    </ul>
+  </section>
+
+  <section class="contact-cta fade-in" style="text-align:center;">
+    <a href="experience-cert.html" class="cv-button">View Experience & Certifications</a>
+  </section>
 </main>
-
-<section class="content-section fade-in">
-  <div class="card">
-    <p>Practical ICT training at NMU, working on web app designing, documentation, problem-solving, and supporting users. I enjoy understanding how systems work and identifying improvements.</p>
-    <p>Strong in teamwork, mentorship, and continuous learning. Committed to exploring technology areas where problem-solving, analysis, and structured thinking are key.</p>
-  </div>
-</section>
-
-<section class="what-i-do fade-in">
-  <h3>Quick Facts</h3>
-  <ul>
-    <li>📍 Based in Eastern Cape, South Africa</li>
-    <li>🎓 Diploma in Systems Development – Boston City Campus (Modules: A+, Security+)</li>
-    <li>💻 Experience in IT Support and Peer Advising</li>
-    <li>🌟 Cisco, Microsoft, and Coursera Certified</li>
-  </ul>
-</section>
-
-<section class="contact-cta fade-in" style="text-align:center;">
-  <a href="experience-cert.html" class="cv-button">See My Experience & Certifications</a>
-</section>
 
 <footer>© 2025 Phumza Sotyantya</footer>
 
 <script>
-function toggleNav(toggle) {
-  document.querySelector('.nav-links').classList.toggle('show');
-  toggle.classList.toggle('open');
-}
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
 </script>
 
 </body>
