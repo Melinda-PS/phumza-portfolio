@@ -1,18 +1,15 @@
 /* ==========================================================
    GLOBAL DARK THEME — PHUMZA SOTYANTYA
-   Unified blue + white aesthetic across all pages
    ========================================================== */
 
-/* ========== RESET ========== */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 :root {
   --primary-blue: #1e90ff;
@@ -22,14 +19,13 @@ html {
   --card-bg: #1a233e;
   --text-light: #f0f4ff;
   --text-muted: #a0b3d1;
-  --nav-hover: #63b3ff;
-  --shadow: rgba(0, 0, 0, 0.4);
+  --shadow: rgba(0,0,0,0.4);
 }
 
-/* ========== BASE STYLES ========== */
+/* BASE */
 body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-dark);
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
   color: var(--text-light);
   line-height: 1.6;
   display: flex;
@@ -37,11 +33,11 @@ body {
   min-height: 100vh;
 }
 
-/* ========== HEADER / NAVIGATION ========== */
+/* HEADER */
 header {
   display: flex;
-  flex-direction: column;  /* stack h1 above nav */
-  align-items: center;     /* center horizontally */
+  flex-direction: column;
+  align-items: center;
   padding: 1rem 2rem;
   background: var(--bg-darker);
   position: sticky;
@@ -57,23 +53,13 @@ header h1 {
   letter-spacing: 0.05em;
 }
 
-/* Navigation Tabs */
-nav {
-  width: 100%;
-  margin-top: 0.5rem;
-}
-
+/* NAV */
 nav ul {
   display: flex;
-  justify-content: center; /* center the tabs */
-  gap: 1.5rem;            /* spacing between tabs */
+  justify-content: center;
+  gap: 1.5rem;
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  position: relative;
+  margin-top: 0.5rem;
 }
 
 nav a {
@@ -82,74 +68,47 @@ nav a {
   color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
   border-radius: 6px;
+  position: relative;
   transition: all 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-  background-color: var(--primary-blue);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-/* Dropdown (if needed) */
-nav li ul {
-  display: none;
+/* Sliding underline effect */
+nav a::after {
+  content: '';
   position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--bg-darker);
-  border-radius: 6px;
-  min-width: 180px;
-  box-shadow: 0 4px 12px var(--shadow);
-  z-index: 100;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: transform 0.3s ease;
 }
 
-nav li:hover > ul {
-  display: block;
+nav a:hover::after,
+nav a.active::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
-nav li ul li a {
-  padding: 0.6rem 1rem;
-  color: var(--text-light);
+nav a:hover {
+  color: #fff;
 }
 
-nav li ul li a:hover {
-  background: var(--card-bg);
-  color: var(--primary-blue);
-}
-
-/* ========== HERO SECTION ========== */
+/* HERO */
 .hero {
+  position: relative;
   text-align: center;
   padding: 6rem 2rem 4rem;
   background: linear-gradient(to bottom, var(--bg-dark), var(--card-bg));
+  overflow: hidden;
 }
 
-.hero h2 {
-  font-size: 2.4rem;
-  margin-bottom: 0.75rem;
-  color: var(--primary-blue);
-}
+.hero h2 { font-size: 2.4rem; color: var(--primary-blue); margin-bottom: 0.75rem; }
+.hero p.tagline { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+.hero blockquote { font-style: italic; color: var(--text-light); max-width: 650px; margin: 1.5rem auto; line-height: 1.6; font-weight: 600; }
 
-.hero p.tagline {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-}
-
-.hero blockquote {
-  font-style: italic;
-  color: var(--text-light);
-  font-size: 1.1rem;
-  margin: 1.5rem auto;
-  max-width: 650px;
-  line-height: 1.6;
-  font-weight: 600;
-}
-
+/* Buttons */
 .cv-button {
   background-color: var(--primary-blue);
   color: white;
@@ -157,146 +116,72 @@ nav li ul li a:hover {
   border-radius: 9999px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
   margin: 0.4rem;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cv-button:hover {
   background-color: var(--primary-blue-dark);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(30, 144, 255, 0.4);
+  box-shadow: 0 8px 20px rgba(30,144,255,0.4);
 }
 
-/* ========== SECTIONS (GENERAL) ========== */
-section {
-  padding: 4rem 2rem;
-}
+/* SECTIONS */
+section { padding: 4rem 2rem; }
+h3 { color: var(--primary-blue); font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; }
 
-h3 {
-  color: var(--primary-blue);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* ========== WHAT I DO / QUICK FACTS ========== */
-.what-i-do {
-  background: var(--bg-darker);
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.what-i-do ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.what-i-do li {
-  background: var(--card-bg);
-  margin: 0.7rem 0;
-  padding: 1rem;
-  border-left: 4px solid var(--primary-blue);
-  text-align: left;
-  border-radius: 6px;
-  color: var(--text-light);
-}
-
-/* ========== CARDS / PROJECTS / CERTIFICATES ========== */
-.cards-grid,
-.projects-grid,
-.cert-grid {
+/* PROJECT CARDS */
+.projects-grid {
   display: grid;
   gap: 1.5rem;
-  margin-top: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
 }
 
-.card,
-.cert-card {
+.card {
+  position: relative;
   background: var(--card-bg);
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
   text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover,
-.cert-card:hover {
+.card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(30, 144, 255, 0.4);
+  box-shadow: 0 10px 25px rgba(30,144,255,0.4);
 }
 
-.card h3,
-.cert-card h3 {
-  margin-bottom: 0.75rem;
-  color: var(--primary-blue);
-}
-
-.card p,
-.cert-card p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.card img,
-.card iframe,
-.cert-card img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-/* Tech Stack */
-.tech-stack {
+/* SKILLS */
+.skills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin-bottom: 1rem;
 }
 
-.tech-stack span {
-  background-color: rgba(99,179,255,0.15);
-  color: var(--nav-hover);
+.skills span {
+  display: inline-block;
+  background-color: rgba(30,144,255,0.15);
+  color: var(--primary-blue);
   font-weight: 600;
   font-size: 0.85rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  border-radius: 50px;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Links Buttons */
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
+.skills span:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: rgba(30,144,255,0.25);
 }
 
-.links a {
-  background-color: var(--primary-blue);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+/* ABOUT & CONTACT */
+.about-preview, .contact-cta { text-align: center; margin-top: 2rem; }
 
-.links a:hover {
-  background-color: var(--primary-blue-dark);
-  transform: translateY(-2px);
-}
-
-/* ========== CONTACT / FOOTER ========== */
+/* FOOTER */
 footer {
   background-color: var(--bg-darker);
   text-align: center;
@@ -307,68 +192,19 @@ footer {
   margin-top: auto;
 }
 
-/* ========== ACCESSIBILITY & ANIMATIONS ========== */
-a:focus,
-button:focus {
-  outline: 2px dashed var(--primary-blue);
-  outline-offset: 4px;
-}
+/* ANIMATIONS */
+.fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 1s ease-out forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ========== RESPONSIVE DESIGN ========== */
+/* RESPONSIVE */
 @media (max-width: 800px) {
-  nav a {
-    font-size: 0.95rem;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p.tagline {
-    font-size: 1rem;
-  }
-
-  .cv-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
-  }
+  .hero h2 { font-size: 2rem; }
+  .hero p.tagline { font-size: 1rem; }
+  .cv-button { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
 }
 
 @media (max-width: 500px) {
-  header {
-    flex-direction: column;
-    align-items: center; /* center tabs on small screens */
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    padding: 0.4rem 0.8rem;
-  }
-
-  .hero {
-    padding: 4rem 1.5rem;
-  }
-
-  .what-i-do li {
-    text-align: center;
-  }
+  header ul { flex-wrap: wrap; justify-content: center; }
+  header h1 { font-size: 1.5rem; }
+  .hero { padding: 4rem 1.5rem; }
 }
