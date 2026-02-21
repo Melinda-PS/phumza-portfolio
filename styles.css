@@ -9,11 +9,8 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-/* COLORS */
 :root {
   --primary-blue: #1e90ff;
   --primary-blue-dark: #0056b3;
@@ -36,10 +33,7 @@ body {
   min-height: 100vh;
 }
 
-/* ==========================================================
-   HEADER
-   ========================================================== */
-
+/* HEADER */
 header {
   display: flex;
   flex-direction: column;
@@ -66,10 +60,10 @@ nav ul {
   gap: 1.5rem;
   list-style: none;
   margin-top: 0.5rem;
-  flex-wrap: wrap;
 }
 
 nav a {
+  display: block;
   padding: 0.5rem 1rem;
   color: var(--text-light);
   text-decoration: none;
@@ -79,7 +73,7 @@ nav a {
   transition: all 0.3s ease;
 }
 
-/* underline animation */
+/* Sliding underline effect */
 nav a::after {
   content: '';
   position: absolute;
@@ -97,14 +91,16 @@ nav a.active::after {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* ==========================================================
-   HERO SECTIONS
-   ========================================================== */
+nav a:hover {
+  color: #fff;
+}
 
+/* HERO */
 .hero {
   text-align: center;
   padding: 6rem 2rem 4rem;
   background: linear-gradient(to bottom, var(--bg-dark), var(--card-bg));
+  overflow: hidden;
 }
 
 .hero h2 {
@@ -113,200 +109,100 @@ nav a.active::after {
   margin-bottom: 0.75rem;
 }
 
-.hero p.tagline {
+.hero p {
   font-size: 1.1rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
-/* ABOUT HERO (IMAGE + TEXT) */
-.about-hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  max-width: 520px;
-}
-
-.hero-image img {
-  width: 260px;
-  max-width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(30,144,255,0.25);
-}
-
-/* ==========================================================
-   BUTTONS
-   ========================================================== */
-
+/* BUTTONS */
 .cv-button {
-  background: var(--primary-blue);
+  background-color: var(--primary-blue);
   color: white;
   padding: 0.85rem 1.8rem;
   border-radius: 9999px;
   text-decoration: none;
   font-weight: 600;
+  margin: 0.4rem;
   display: inline-block;
-  transition: 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cv-button:hover {
-  background: var(--primary-blue-dark);
+  background-color: var(--primary-blue-dark);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(30,144,255,0.4);
 }
 
-/* ==========================================================
-   SECTIONS
-   ========================================================== */
-
-section {
-  padding: 4rem 2rem;
-}
-
-h3 {
-  color: var(--primary-blue);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* ==========================================================
-   GRID LAYOUTS
-   ========================================================== */
-
-.projects-grid,
+/* CARDS GRID */
 .cards-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 2rem;
+  padding: 0 2rem;
 }
 
-/* ==========================================================
-   CARDS
-   ========================================================== */
-
 .card {
+  position: relative;
   background: var(--card-bg);
-  border-radius: 14px;
-  padding: 1.5rem;
+  border-radius: 12px;
+  padding: 1rem;
   text-align: center;
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-  transition: 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(30,144,255,0.35);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(30,144,255,0.4);
 }
 
-/* PERFECT IMAGE FIT */
 .card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
-/* VIDEO EMBEDS */
-.card iframe {
-  width: 100%;
-  height: 220px;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-/* ==========================================================
-   SKILLS TAGS
-   ========================================================== */
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.skills span {
-  background: rgba(30,144,255,0.15);
+.card h3 {
   color: var(--primary-blue);
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: 50px;
+  margin-bottom: 0.5rem;
 }
 
-/* ==========================================================
-   FOOTER
-   ========================================================== */
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
 
+/* FOOTER */
 footer {
-  background: var(--bg-darker);
+  background-color: var(--bg-darker);
   text-align: center;
   padding: 1.2rem;
   font-size: 0.9rem;
   color: var(--text-muted);
+  border-top: 1px solid rgba(255,255,255,0.05);
   margin-top: auto;
 }
 
-/* ==========================================================
-   ANIMATIONS
-   ========================================================== */
+/* ANIMATIONS */
+.fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 1s ease-out forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ==========================================================
-   RESPONSIVE DESIGN
-   ========================================================== */
-
+/* RESPONSIVE */
 @media (max-width: 800px) {
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero-image img {
-    width: 200px;
-  }
-
-  .card img,
-  .card iframe {
-    height: 200px;
-  }
+  .hero h2 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
 }
 
 @media (max-width: 500px) {
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero {
-    padding: 4rem 1.5rem;
-  }
-
-  .about-hero {
-    flex-direction: column;
-  }
-
-  .card img,
-  .card iframe {
-    height: 180px;
-  }
+  header ul { flex-wrap: wrap; justify-content: center; }
+  header h1 { font-size: 1.5rem; }
+  .cards-grid { padding: 0 1rem; }
+  .card img { height: 150px; }
 }
