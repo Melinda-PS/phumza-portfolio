@@ -5,37 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <!-- ====== HEADER ====== -->
-  <header>
-    <h1>Phumza Sotyantya</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="experience-cert.html">Experience + Skills</a></li>
-        <li><a href="beyond.html">Beyond the Code</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Resume + Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="content-container">
-    <!-- ====== HERO ====== -->
-    <section class="hero fade-in">
-      <h2>Projects & Innovation</h2>
-      <p class="tagline">
-        A selection of projects reflecting my passion for accessibility, innovation, and real-world problem solving — built using a mix of AI, software development, and user-centered design.
-      </p>
-      <blockquote><strong>“Innovation isn’t about what we can build — it’s about who we build it for.”</strong></blockquote>
-    </section>
+<header>
+  <h1>Phumza Sotyantya</h1>
+  <div class="nav-toggle" id="nav-toggle">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="experience-cert.html">Experience</a>
+    <a href="beyond.html">Beyond</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-    <!-- ====== PROJECTS GRID ====== -->
-    <section class="cards-grid fade-in">
+<main>
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <h2>Projects & Innovation</h2>
+    <p class="tagline">
+      A selection of projects reflecting my passion for accessibility, innovation, and real-world problem solving — built using AI, software development, and user-centered design.
+    </p>
+    <blockquote style="color:#a0b3d1; font-style:italic; margin-top:1rem;">
+      “Innovation isn’t about what we can build — it’s about who we build it for.”
+    </blockquote>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="cards-grid fade-in">
 
       <!-- Accessibility Tool -->
       <div class="card fade-in">
@@ -141,16 +142,23 @@
         </div>
       </div>
 
-    </section>
+     </section>
 
-    <!-- ====== CTA ====== -->
-    <section class="cta-section fade-in" style="text-align: center; padding: 3rem 0;">
-      <a href="contact.html" class="cv-button">Get in Touch</a>
-    </section>
-  </main>
+  <section class="cta-section fade-in" style="text-align:center; padding:3rem 0;">
+    <a href="contact.html" class="cv-button">Get in Touch</a>
+  </section>
+</main>
 
-  <footer>
-    © 2025 Phumza Sotyantya
-  </footer>
+<footer>© 2025 Phumza Sotyantya</footer>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>
