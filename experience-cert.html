@@ -5,44 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Experience & Certifications | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <header>
-    <h1>Phumza Sotyantya</h1>
-    <nav>
+<header>
+  <h1>Phumza Sotyantya</h1>
+  <div class="nav-toggle" id="nav-toggle">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience-cert.html" class="active">Experience</a>
+    <a href="beyond.html">Beyond</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+    <!-- HERO -->
+  <section class="hero fade-in">
+    <h2>Experience, Skills & Certifications</h2>
+    <p class="tagline">
+      Combining technical expertise, academic training, and real-world experience to create solutions that make technology more human, inclusive, and impactful.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE GRID -->
+  <section class="cards-grid fade-in">
+    <div class="card">
+      <h4>ICT Intern</h4>
+      <p><strong>Nelson Mandela University</strong> | Nov 2025 – Mar 2026</p>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experience-cert.html" class="active">Experience + Skills</a></li>
-        <li><a href="beyond.html">Beyond the Code</a></li>
-        <li><a href="contact.html">Resume + Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- ===== INTRO ===== -->
-    <section class="hero fade-in">
-      <h2>Experience, Skills & Certifications</h2>
-      <p class="tagline">
-        Combining technical expertise, academic training, and real-world experience to create solutions that make technology more human, inclusive, and impactful.
-      </p>
-    </section>
-
-    <!-- ===== PROFESSIONAL EXPERIENCE ===== -->
-    <section class="content-section fade-in">
-      <h3>Professional Experience</h3>
-      <div class="cards-grid">
-
-        <!-- EXPERIENCE ADDED -->
-        <div class="card fade-in">
-          <h4>ICT Intern </h4>
-          <p class="job-info"><strong>Nelson Mandela University</strong> | Nov 2025 – Mar 2026</p>
-          <ul>
-            <li>Supported ICT users, assisted with student device deployment.</li>
+           <li>Supported ICT users, assisted with student device deployment.</li>
             <li>Involved in development-related project (web application).</li>
              <li>Assisted with the Graduation (Summer) Ticketing system, ensuring accuracy and proper allocation.</li>
               <li>Assisted in the lab during registration period by setting up printers on desktops.</li>
@@ -52,10 +47,11 @@
         <!-- EXPERIENCE -->
         <div class="card fade-in">
           <h4>IT Support Associate</h4>
-          <p class="job-info"><strong>CAPACITI</strong> | Gqeberha, Eastern Cape — May 2025 – Present</p>
+          <p class="job-info"><strong>CAPACITI</strong> | Gqeberha, Eastern Cape — May 2025 – March 2026</p>
           <ul>
             <li>Developing intelligent applications with real-world AI use cases.</li>
             <li>Completed Coursera certifications in IT Support and Professional Communication.</li>
+            <li>Participated in AI Hackathon.</li>
           </ul>
         </div>
 
@@ -77,7 +73,7 @@
       <div class="cards-grid">
         <div class="card"><h4>Programming & Development</h4><p>Python, Java, HTML, CSS, JavaScript</p></div>
         <div class="card"><h4>Databases</h4><p>SQL, MySQL, MS Access</p></div>
-        <div class="card"><h4>Tools & Platforms</h4><p>GitHub, Google Colab, Microsoft 365, Streamlit</p></div>
+        <div class="card"><h4>Tools & Platforms</h4><p>GitHub, Google Colab, Microsoft 365, Streamlit, Ms Visual Studio 2022</p></div>
       </div>
     </section>
 
@@ -118,14 +114,21 @@
       </div>
     </section>
 
-    <!-- ===== CTA ===== -->
-    <section class="cta-section fade-in">
-      <a href="projects.html" class="cv-button">Explore My Projects</a>
-    </section>
-  </main>
+ <section class="cta-section fade-in" style="text-align:center; padding:3rem 0;">
+    <a href="projects.html" class="cv-button">Explore My Projects</a>
+  </section>
+</main>
 
-  <footer>
-    © 2025 Phumza Sotyantya
-  </footer>
+<footer>© 2025 Phumza Sotyantya</footer>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>
