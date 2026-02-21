@@ -5,6 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Hero layout: text left, image right */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 6rem 2rem 4rem;
+      background: linear-gradient(to bottom, var(--bg-dark), var(--card-bg));
+      gap: 2rem;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h2 {
+      color: var(--primary-blue);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p.tagline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .hero-text blockquote {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero img {
+      max-width: 350px;
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: 0 10px 25px var(--hover-glow);
+    }
+
+    /* Optional: block puzzle effect */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px;
+      max-width: 350px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .image-grid img {
+      width: 100%;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero img, .image-grid { max-width: 300px; margin: auto; }
+      .hero-text h2 { font-size: 2rem; }
+      .hero-text p.tagline { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -25,15 +95,33 @@
 
 <main>
   <section class="hero fade-in">
-    <div style="max-width:600px; margin:auto;">
+    <div class="hero-text">
       <h2>Hello, I’m Phumza</h2>
       <p class="tagline">A <strong>Systems Development Graduate</strong> passionate about solving problems with technology and creating inclusive digital solutions.</p>
-      <blockquote style="font-size:1.2rem; font-style:italic; color:#a0b3d1; margin-top:1rem; line-height:1.6;">
-        "“Innovation isn’t about what we can build — it’s about who we build it for.”."
+      <blockquote>
+        "Innovation isn’t about what we can build — it’s about who we build it for."
       </blockquote>
       <a href="about.html" class="cv-button">Learn More About Me</a>
     </div>
+
+    <!-- Image block -->
+    <!-- Option 1: Single image -->
     <img src="assets/image_f275c45c.png" alt="Phumza avatar">
+
+    <!-- Option 2: Block puzzle effect -->
+    <!--
+    <div class="image-grid">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 1">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 2">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 3">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 4">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 5">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 6">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 7">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 8">
+      <img src="assets/image_f275c45c.png" alt="Puzzle 9">
+    </div>
+    -->
   </section>
 </main>
 
