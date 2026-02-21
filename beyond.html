@@ -5,98 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Beyond the Code | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ====== HEADER ====== -->
-  <header class="navbar">
-    <h1 class="logo">Phumza Sotyantya</h1>
+<header>
+  <h1>Phumza Sotyantya</h1>
+  <div class="nav-toggle" onclick="toggleNav(this)"><span></span><span></span><span></span></div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="beyond.html" class="active">Beyond</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience-cert.html">Experience</a>
+    <a href="skills.html">Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-    <!-- Hamburger Menu Icon -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+<main class="hero fade-in">
+  <h2>Life Outside IT</h2>
+  <p class="tagline">Exploring passions beyond technology, staying active, and contributing to the community.</p>
+</main>
 
-    <nav id="nav-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="beyond.html" class="active">Beyond the Code</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experience-cert.html">Experience + Skills</a></li>
-        <li><a href="contact.html">Resume + Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<section class="cards-grid fade-in">
+  <div class="card">
+    <img src="assets/hiking.jpg" alt="Hiking">
+    <h3>Hiking & Outdoors</h3>
+    <p>Exploring trails and enjoying nature — my reset button.</p>
+  </div>
+  <div class="card">
+    <img src="assets/bookstores.jpg" alt="Reading / Bookstore">
+    <h3>Books & Learning</h3>
+    <p>Passionate reader — hunting for stories and knowledge.</p>
+  </div>
+  <div class="card">
+    <img src="assets/race.jpg" alt="Running">
+    <h3>Running & Fitness</h3>
+    <p>After the finish line! Running keeps me disciplined and energized.</p>
+  </div>
+  <div class="card">
+    <img src="assets/youngWomen f.jpg" alt="Community Outreach">
+    <h3> Young Women Fellowship- Community Outreach </h3>
+    <p>Supporting those in need through acts of kindness and mentorship.</p>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero fade-in">
-    <h2>Life Outside IT</h2>
-    <p>Here's a peek into the activities and passions that shape me beyond technology.</p>
-  </section>
+<section class="contact-cta fade-in" style="text-align:center;">
+  <a href="contact.html" class="cv-button">Connect With Me</a>
+</section>
 
-  <!-- ====== LIFE OUTSIDE IT GRID ====== -->
-  <section class="cards-grid fade-in">
+<footer>© 2025 Phumza Sotyantya</footer>
 
-    <!-- Hiking -->
-    <div class="card">
-      <img src="assets/hiking.jpg" alt="Hiking Adventure">
-      <h3>Hiking & Outdoors</h3>
-      <p>Exploring trails and staying active — nature is my reset button.</p>
-    </div>
-
-    <!-- Books -->
-    <div class="card">
-      <img src="assets/bookstores.jpg" alt="Bookstore / Reading">
-      <h3>Books & Learning</h3>
-      <p>Passionate reader — always hunting for new stories and knowledge in bookstores or online.</p>
-    </div>
-
-    <!-- Running -->
-    <div class="card">
-      <img src="assets/race.jpg" alt="Running Event">
-      <h3>Running & Fitness</h3>
-      <p>After the finish line! Running keeps me disciplined and energized.</p>
-    </div>
-
-    <!-- Church -->
-    <div class="card">
-      <img src="assets/youngWomen f.jpg" alt="Community Outreach">
-      <h3>Community Outreach</h3>
-      <p>Supporting those in need through acts of kindness and practical assistance.</p>
-    </div>
-
-    <!-- Church -->
-    <div class="card">
-      <img src="assets/Bible Study Session.jpg" alt="Bible Study Session">
-      <h3>Faith & Mentorship</h3>
-      <p>Leading sessions focused on empowering young people through faith and guidance.</p>
-    </div>
-
-  </section>
-
-  <!-- CTA -->
-  <section class="contact-cta fade-in" style="text-align:center; padding:3rem 0;">
-    <a href="contact.html" class="cv-button">Connect With Me</a>
-  </section>
-
-  <footer>
-    © 2025 Phumza Sotyantya
-  </footer>
-
-  <!-- Hamburger Menu Script -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      hamburger.classList.toggle('open');
-    });
-  </script>
+<script>
+function toggleNav(toggle) {
+  document.querySelector('.nav-links').classList.toggle('show');
+  toggle.classList.toggle('open');
+}
+</script>
 
 </body>
 </html>
