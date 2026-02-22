@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resume & Contact | Phumza Sotyantya</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* QR card styling */
+    .contact-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px var(--shadow);
+      width: 220px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px var(--hover-glow);
+    }
+
+    .contact-card img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      border: 2px solid var(--primary-blue);
+    }
+
+    .contact-card a {
+      display: block;
+      color: var(--primary-blue);
+      text-decoration: none;
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
@@ -32,19 +77,28 @@
     </p>
   </section>
 
-  <!-- CONTACT INFO -->
-  <section class="content-section fade-in" style="text-align:center;">
-    <h3>Contact Me</h3>
-     <p>LinkedIn: <a href="https://www.linkedin.com/in/phumza-sotyantya" target="_blank" style="color: var(--primary-blue);">linkedin.com/in/phumza-sotyantya</a></p>
-    <p>GitHub: <a href="https://github.com/Melinda-PS" target="_blank" style="color: var(--primary-blue);">github.com/Melinda-PS</a></p>
+  <!-- CONTACT INFO CARDS -->
+  <section class="contact-cards fade-in">
+    <!-- LinkedIn QR Card -->
+    <div class="contact-card">
+      <img src="assets/linkedin_qr.png" alt="LinkedIn QR Code">
+      <h4>LinkedIn</h4>
+      <a href="https://www.linkedin.com/in/phumza-sotyantya" target="_blank">linkedin.com/in/phumza-sotyantya</a>
+    </div>
+
+    <!-- GitHub Card -->
+    <div class="contact-card">
+      <img src="assets/github.png" alt="GitHub Logo">
+      <h4>GitHub</h4>
+      <a href="https://github.com/Melinda-PS" target="_blank">github.com/Melinda-PS</a>
+    </div>
   </section>
-
-
 </main>
 
 <footer>© 2025 Phumza Sotyantya</footer>
 
 <script>
+  // Hamburger toggle
   const navToggle = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
   navToggle.addEventListener('click', () => {
